@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+     crossorigin="anonymous">
+
+<style>
+
+  
+/* GENERAL */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(10, 5, 5);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+
+
+/* Navbar container */
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #2f4962;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo a {
+  display: flex;
+  width: 200px;
+  height: 70px;
+  padding-top: 0;
+}
+
+.logo-img {
+  width: 100px; /* Adjust the size of your logo */
+  height: 50px;
+  
+}
+
+/* Navbar links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #6889a8;
+  color: white;
+}
+
+/* The menu icon (hamburger) */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f8f7f3;
+}
+
+/* Responsive menu */
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links a {
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+}
+
+
+/*section*/
+
+section{
+   padding-top: 4vh;
+   height: 96vh;
+   margin: 0 10rem;
+   box-sizing: border-box;
+   min-height: fit-content;
+    
+}
+.section-container{
+    display: flex;
+}
+#header{
+  display: flex;  
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section_pic{
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+   
+}
+.section_text{
+align-self: center;
+text-align: center;
+}
+.section_text p{
+    font-weight: 600;
+}
+.section_text_p1{
+  
+   text-align: center;
+   color:#6889a8 ; 
+   
+}
+.section_text_p2{
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #6889a8;
+  
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+ 
+    color: #2f4962; 
+  
+   
+   
+}
+.socials-container{
+  display: flex;  
+  justify-content:center ;
+  margin-top: 1rem;
+  gap:1rem
+  
+}
+.icon{
+
+    cursor: pointer;
+    height: 2rem;
+    
+}
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+   
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: #2f4962 0.1rem solid;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  cursor: pointer;
+ color: #94afc9;
+}
+
+.btn-color-1:hover
+.btn-color-2:hover {
+ background: #94afc9;
+  color:#94afc9
+}
+
+.btn-color-1:hover {
+  background: #94afc9
+
+}
+.btn-color-2:hover {
+  background: #94afc9
+
+}
+.btn-color-1,
+.btn-color-2 {
+  background: #2f4962;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+#o-and-e{
+    position: relative;
+}
+.o-and-e-containers{
+ gap:2rem; 
+ margin-bottom: 2rem; 
+ margin-top: 2rem; 
+}
+.details-container{
+    justify-content: center;
+    flex-direction: column;
+
+}
+.o-and-e-containers,.details-container{
+display: flex;    
+ }  
+ .o-and-e-pic{
+border-radius: 2rem;
+ }
+ .icon-arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+ }
+ .details-container{
+    padding: 1.5rem;
+    flex:1;background-color: #94afc9;
+    border-radius:2rem ;
+    border: black 0.1rem solid;
+    border-color:#2f4962;
+    text-align: center;
+
+
+ }
+ .section-container{
+    gap:4rem;
+    height: 80%;
+ }
+ .section_pic{
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+ }
+#experience{
+position: relative;
+}
+
+
+.experience-sub-title{
+color: #2f4962;
+font-weight: 600;
+font-size: 1.7rem;
+margin-bottom: 2rem;
+
+}
+.experience-details{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.article-containers{
+    display: flex;
+    text-align:initial ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+article{
+    display: flex;
+    width: 10rem;
+    justify-content:space-around ;
+    gap: 0.5rem;
+}
+article .icon{
+    cursor: default;
+}
+#project{
+    position: relative;
+}
+.color-container{
+    border-color: #2f4962;
+    background:#fff;
+
+}
+.project-img{
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+}
+.project-title{
+   margin: 1rem; 
+   color:black;
+}
+.project-btn{
+    color: white;
+    border-color: #2f4962;
+}
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+padding-top: 10px ;
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+
+footer {
+    background-color: #2f4962;
+ height: 10vh;
+
+
+}
+
+footer p {
+  text-align: center;
+  margin-top: 2 1rem;
+  padding-top: 20px;
+  color:#f8f7f3 ;
+  
+}
+
+@media screen and (max-width:1400px){
+ #header{
+  height: 83vh;
+  margin-bottom: 6rem;
+
+ }
+ .o-and-e-containers{
+  flex-wrap: wrap;
+ }
+ #contact,
+  #project {
+    height: fit-content;
+  }
+  
+}
+
+@media screen and (max-width:1200px){
+ 
+
+
+#experience,
+.experience-details{
+  margin-top: 2rem;
+
+}
+#header,.section-container{
+display: block;
+}
+.arrow{
+  display: none;
+}
+section,.section-container{
+  height: fit-content;
+}
+section{
+  margin: 0 5%;
+
+  
+}
+.section_pic{
+  width: 275px;
+  height: 275px;
+  margin: 0 auto 2rem;
+}
+.o-and-e-containers{
+  margin-top: 0;
+}
+}
+
+@media screen and (max-width:600px){
+  #contact,footer{
+    height: 40vh;
+  }
+  #header{
+    height: 83vh;
+    margin-bottom: 0; 
+  }
+  article{
+    font-size: 1rem;
+  }
+  .o-and-e-containers,.contact-info-upper-container,.btn-container{
+ flex-wrap: wrap;
+  }
+  .contact-info-container{
+    margin: 0;
+  }
+  .contact-info-container p, .nav-links li a{
+    font-size:1rem ;
+  }
+  .experience-sub-title{
+    font-size: 1.25rem;
+  }
+  .logo{
+    font-size:1.rem;
+  }
+  .section_pic{
+    width:auto ;
+    height: 64vw;
+    justify-content: center;
+  }
+  .section_text_p2{
+    font-size: 1.25rem;
+    
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .text-container{
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background-color:#2f4962;
+  }
+
+  .navbar a {
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Show the menu on click */
+.navbar.active .navbar-links {
+  display: flex;
+}
+}
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+<body>
+
+  
+
+  
+  <div class="navbar" id="navbar">
+    <div class="logo">
+      <a href="#">
+        <img src="Black and White Square Personal Logo.png" alt="Logo" class="logo-img">
+      </a>
+    </div>
+
+    <!-- Menu Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+
+    <!-- Navbar Links -->
+    <div class="navbar-links">
+      <a href="#header">About Me</a>
+      <a href="#o-and-e">Objective & Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact Me</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div style="margin-top: 30px; padding: 30px;">
+    
+  </div>
+
+  <script>
+    // Toggle the navbar links on click
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', function() {
+      navbar.classList.toggle('active');
+    });
+  </script>
+    <section id="header">
+        <div class="section_pic">
+            <img src="download (3).png" alt="pic">
+ 
+        </div>
+        <div class="section_text">
+            <p class="section_text_p1">Hello, I'm</p>
+            <h1 class="title"> Haneen Sobuh</h1>
+            <p class="section_text_p2">Software Enginner</p>
+            <div class="btn-container">
+              <button
+              class="btn btn-color-2"
+              onclick="window.open('Cv.pdf')"
+            >
+              Download CV
+            </button>
+  
+             <a href="#contact" class="btn btn-color-1">Contact Info</a>
+            </div>
+            <div class="socials-container">
+              <img src="download (4).png" alt="linked"
+              class="icon"
+              onclick="location.href='https://www.linkedin.com/in/haneen-sobuh-5b5335244/'"
+              >  
+
+              <img src="25231.png" alt="githup"
+              class="icon" 
+              onclick="location.href='https://github.com/'"
+              >  
+            </div>
+        </div>
+</section>
+
+<section id="o-and-e">
+    <p class="section_text_p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+<div class="section_pic">
+    <img src="Education-vs-experience_AdobeStock_235027093.png" alt="about" class="o-and-e-pic">
+
+</div>
+<div class="o-and-e-details-container">
+    <div class="o-and-e-containers">
+        <div class="details-container">
+            <img src="11112863.png" alt="Expreience" class="icons">
+            <h3>Internship</h3>
+            <p>Flutter Developer Trainee
+              The Hope International Edu
+              <br>March 2023 – June 2023</p>
+              <p>Orange Coding School
+                <br>August 2024-Present
+              </p>
+        </div>
+<div class="details-container">
+    <img src="3557635.png" alt="Expreience" class="icons">
+    <h3>Education</h3>
+    <p>Bachelor: <b>Software Engineering</b>
+      Jordan University of Science And Technology - Jordan
+      2020-2024
+  
+  </p>
+</div>
+    </div>
+<div class="text-container">
+    <p>
+      I'm a Software Engineering student at Jordan University of Science and Technology (2020-2024) with experience in mobile app development. As a Flutter Developer Trainee at The Hope International Edu, I developed a functional mobile app and optimized its performance. Currently, I'm expanding my skills through Full Stack Developer training at Orange Coding School. My strengths include software development, API integration, and mobile app optimization.    </p>
+</div>
+</div>
+</div>
+
+
+
+</section>
+<section  id="experience">
+    <p class="section_text_p1">Explore MY</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details">
+       <div class="o-and-e-containers">
+        <div class="details-container">
+            <h2 class="experience-sub-title">Technical Skills</h2>
+            <div class="article-containers">
+                <article >
+                    <img src="images-removebg-preview.png" alt="experience" class="icon">
+                    <div >
+                      <h5>Programming</h5>
+                      <p>Expreienced</p>
+                    </div>
+                </article>
+                <article >
+                    <img src="images-removebg-preview.png" alt="experience" class="icon">
+                    <div >
+                      <h5>Frontend Development</h5>
+                      <p>Expreienced</p>
+                    </div>
+                </article>
+                <article >
+                    <img src="images-removebg-preview.png" alt="experience" class="icon">
+                    <div >
+                      <h5>Futter & Dart</h5>
+                      <p>Expreienced</p>
+                    </div>
+                </article>
+                <article >
+                    <img src="images-removebg-preview.png" alt="experience" class="icon">
+                    <div >
+                      <h5>Firebase usage</h5>
+                      <p>Intermediate</p>
+                    </div>
+                </article>
+                <article >
+                    <img src="images-removebg-preview.png" alt="experience" class="icon">
+                    <div >
+                      <h5>Object-Oriented Programming</h5>
+                      <p>Intermediate</p>
+                    </div>
+                </article>
+                <article >
+                  <img src="images-removebg-preview.png" alt="experience" class="icon">
+                  <div >
+                    <h5>Problem Solving</h5>
+                    <p>Bisic</p>
+                  </div>
+              </article>
+
+            </div>
+
+        </div>
+        <div class="details-container">
+            <h2 class="experience-sub-title">Soft skills</h2>
+            <div class="article-containers">
+                <article >
+                    <img src="soft-skills.png" alt="experience" class="icon">
+                    <div >
+                        <h5>Communication</h5>
+                       
+                    </div>
+                </article>
+                <article >
+                    <img src="soft-skills.png" alt="experience" class="icon">
+                    <div >
+                        <h5>Adaptability</h5>
+                       
+                    </div>
+                </article>
+                <article >
+                    <img src="soft-skills.png" alt="experience" class="icon">
+                    <div >
+                        <h5>Time Management</h5>
+                       
+                    </div>
+                </article>
+                <article >
+                    <img src="soft-skills.png" alt="experience" class="icon">
+                    <div >
+                        <h5>Leadership </h5>
+                       
+                    </div>
+                </article>
+                <article >
+                    <img src="soft-skills.png" alt="experience" class="icon">
+                    <div >
+                        <h5>Critical Thinking</h5>
+                        
+                    </div>
+                </article>
+                <article >
+                  <img src="soft-skills.png" alt="experience" class="icon">
+                  <div >
+                      <h5>Emotional Intelligence</h5>
+                    
+                  </div>
+              </article>
+
+            </div>
+
+        </div>
+       </div> 
+    </div>
+   
+</section>
+<section id="project">
+<p class="section_text_p1">Brose My Recent</p>
+<h1 class="title">Project</h1>
+<div class="experience-details">
+    <div class="o-and-e-containers">
+      <div class="details-container color-container">
+        <div class="article-containers">
+            <img src="tidy.png" alt="project1" class="project-img">
+        </div>
+        <h2 class="experience-sub-title project-title">Tidy Touch</h2>
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Haneen-Sobeeh/Orange_task_Haneen'">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Haneen-Sobeeh/Orange_task_Haneen'">Live Demo</button>
+        
+        </div>
+   </div> 
+   <div class="details-container color-container">
+    <div class="article-containers">
+        <img src="Orange_logo.svg.png" alt="project1" class="project-img">
+    </div>
+    <h2 class="experience-sub-title project-title">Orange Task</h2>
+    <div class="btn-container">
+        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Haneen-Sobeeh/Orange_task_Haneen'">Github</button>
+        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Haneen-Sobeeh/Orange_task_Haneen'">Live Demo</button>
+    
+    </div>
+       </div> 
+       <div class="details-container color-container">
+        <div class="article-containers">
+            <img src="Capture.PNG" alt="project1" class="project-img">
+        </div>
+        <h2 class="experience-sub-title project-title">Book World</h2>
+        <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Haneen-Sobeeh/Orange_task_Haneen'">Github</button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Haneen-Sobeeh/Orange_task_Haneen'">Live Demo</button>
+        
+        </div>
+           </div> 
+    </div> 
+       
+</div>
+</section>
+
+<section id="contact">
+    <p class="section_text_p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img
+          src="download (5).png"
+          alt="Email icon"
+          class="icon contact-icon email-icon"
+        />
+        <p><a href="mailto:examplemail@gmail.com" style="color: #2f4962;">Haneensobeeh5@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="download (1).png"
+          alt="LinkedIn icon"
+          class="icon contact-icon"
+        />
+        <p><a href="https://www.linkedin.com "style="color: #2f4962;" >LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="download (6).png"
+          alt="phone"
+          class="icon contact-icon"
+        />
+        <p>+962 781761615</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    
+    <p>Copyright &#169; 2024 Haneen Sobuh. All Rights Reserved.</p>
+  </footer>
+
+  
+    
+</body>
+
+</html>
